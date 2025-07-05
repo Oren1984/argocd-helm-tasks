@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-client
+  namespace: task1
+  labels:
+    access: mysql
+spec:
+  containers:
+  - name: client
+    image: mysql:5.7
+    command: ["sleep", "3600"]
